@@ -8,6 +8,7 @@ var str = "Hello, playground"
 // Because the variable 'str' has already been declared, we do not have to use the 'var' keyword on it again.
 str = "Goobye"
 
+
 // MARK: - Strings & Integers
 
 var age = 38
@@ -18,6 +19,7 @@ var age = 38
 
 // Large numbers can use underscored as thousand seperators to make the number more readable.
 var population = 8_000_000
+
 
 // MARK: - Multi-line Strings
 
@@ -35,6 +37,7 @@ over multiple \
 lines
 """
 
+
 // MARK: - Doubles & Booleans
 
 // 'pi' is of type double as it holds a floating point number
@@ -42,6 +45,7 @@ var pi = 3.141
 
 // 'awesome' is a boolean which can hold true/false
 var awesome = true
+
 
 // MARK: - String Interpolation
 
@@ -58,6 +62,7 @@ var results = "The test results are here: \(scoreCurvedMessag)"
 
 // A reason for using string interpolation would be if you are trying to create a string with two or more types where 1 of the types is not a string.
 
+
 // MARK: - Constants
 
 // Value can be set once, and never changes.
@@ -66,6 +71,7 @@ let taylor = "swift"
 // taylor = "this won't work"
 
 // I should use let by default unless I know/expect a value I am creating will be changed at some point. XCode will even complain if an unchanged value is not declared as a constant.
+
 
 // MARK: - Type Annotations
 
