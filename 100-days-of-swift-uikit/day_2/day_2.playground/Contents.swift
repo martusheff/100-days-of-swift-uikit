@@ -57,7 +57,6 @@ favoriteIceCream["Emily", default: "Unknown"]
 
 
 
-
 // Creating Empty Collection
 
 // Swift has built in functionality for initializing empty dictionaries & arrays.
