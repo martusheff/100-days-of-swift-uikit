@@ -87,6 +87,7 @@ case 0..<50:
     print("You failed badle.")
 case 50..<85:
     print("You did OK.")
+    fallthrough // Will also execute next case (in this case, default)
 default:
     print("You did great!")
 }
