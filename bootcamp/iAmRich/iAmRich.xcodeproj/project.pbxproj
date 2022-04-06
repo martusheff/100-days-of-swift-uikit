@@ -13,7 +13,18 @@
 		DFFA28B127FE274500BDA5A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA28AF27FE274500BDA5A6 /* Main.storyboard */; };
 		DFFA28B327FE274700BDA5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFFA28B227FE274700BDA5A6 /* Assets.xcassets */; };
 		DFFA28B627FE274700BDA5A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA28B427FE274700BDA5A6 /* LaunchScreen.storyboard */; };
+		DFFA28C627FE366D00BDA5A6 /* iAmRichUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA28C527FE366D00BDA5A6 /* iAmRichUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFFA28C927FE366D00BDA5A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFFA289E27FE274500BDA5A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFFA28A527FE274500BDA5A6;
+			remoteInfo = iAmRich;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DFFA28A627FE274500BDA5A6 /* iAmRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAmRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,19 @@
 		DFFA28B227FE274700BDA5A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFFA28B527FE274700BDA5A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFFA28B727FE274700BDA5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFA28C327FE366D00BDA5A6 /* iAmRichUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iAmRichUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA28C527FE366D00BDA5A6 /* iAmRichUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAmRichUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DFFA28A327FE274500BDA5A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA28C027FE366D00BDA5A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFA28A827FE274500BDA5A6 /* iAmRich */,
+				DFFA28C427FE366D00BDA5A6 /* iAmRichUITests */,
 				DFFA28A727FE274500BDA5A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFA28A627FE274500BDA5A6 /* iAmRich.app */,
+				DFFA28C327FE366D00BDA5A6 /* iAmRichUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +87,14 @@
 				DFFA28B727FE274700BDA5A6 /* Info.plist */,
 			);
 			path = iAmRich;
+			sourceTree = "<group>";
+		};
+		DFFA28C427FE366D00BDA5A6 /* iAmRichUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA28C527FE366D00BDA5A6 /* iAmRichUITests.swift */,
+			);
+			path = iAmRichUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +117,24 @@
 			productReference = DFFA28A627FE274500BDA5A6 /* iAmRich.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DFFA28C227FE366D00BDA5A6 /* iAmRichUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFFA28CB27FE366D00BDA5A6 /* Build configuration list for PBXNativeTarget "iAmRichUITests" */;
+			buildPhases = (
+				DFFA28BF27FE366D00BDA5A6 /* Sources */,
+				DFFA28C027FE366D00BDA5A6 /* Frameworks */,
+				DFFA28C127FE366D00BDA5A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFFA28CA27FE366D00BDA5A6 /* PBXTargetDependency */,
+			);
+			name = iAmRichUITests;
+			productName = iAmRichUITests;
+			productReference = DFFA28C327FE366D00BDA5A6 /* iAmRichUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					DFFA28A527FE274500BDA5A6 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					DFFA28C227FE366D00BDA5A6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = DFFA28A527FE274500BDA5A6;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				DFFA28A527FE274500BDA5A6 /* iAmRich */,
+				DFFA28C227FE366D00BDA5A6 /* iAmRichUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +181,13 @@
 				DFFA28B627FE274700BDA5A6 /* LaunchScreen.storyboard in Resources */,
 				DFFA28B327FE274700BDA5A6 /* Assets.xcassets in Resources */,
 				DFFA28B127FE274500BDA5A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA28C127FE366D00BDA5A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +204,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFFA28BF27FE366D00BDA5A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFA28C627FE366D00BDA5A6 /* iAmRichUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFFA28CA27FE366D00BDA5A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFFA28A527FE274500BDA5A6 /* iAmRich */;
+			targetProxy = DFFA28C927FE366D00BDA5A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DFFA28AF27FE274500BDA5A6 /* Main.storyboard */ = {
@@ -342,6 +418,40 @@
 			};
 			name = Release;
 		};
+		DFFA28CC27FE366D00BDA5A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YXFUY64CT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andronickmartusheff.iAmRichUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iAmRich;
+			};
+			name = Debug;
+		};
+		DFFA28CD27FE366D00BDA5A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YXFUY64CT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andronickmartusheff.iAmRichUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iAmRich;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +469,15 @@
 			buildConfigurations = (
 				DFFA28BB27FE274700BDA5A6 /* Debug */,
 				DFFA28BC27FE274700BDA5A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFFA28CB27FE366D00BDA5A6 /* Build configuration list for PBXNativeTarget "iAmRichUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA28CC27FE366D00BDA5A6 /* Debug */,
+				DFFA28CD27FE366D00BDA5A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
