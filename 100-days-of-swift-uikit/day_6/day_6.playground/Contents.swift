@@ -99,3 +99,25 @@ travel() {
     request after it was completed. ("Please fetch this data, and when done, run this closure.")
  
  */
+
+
+func exercise() {
+    
+    
+    let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    
+    //The number of letters in alphabet equals 26
+    var myPW = ""
+    for _ in 1...6 {
+    print(Int.random(in: 1..<100))
+        let myRandomIndex = Int.random(in: 1...21322) % 26
+        myPW += alphabet[myRandomIndex]
+    }
+    let password = myPW //Replace this comment with your code.
+    
+    print(password)
+    
+    
+}
+
+exercise()
