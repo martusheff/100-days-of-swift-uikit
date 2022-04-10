@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewOne: UIImageView!
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
-    @IBOutlet weak var diceTotalLabelView: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
         diceImageViewTwo.image = UIImage(named: dice[randomRollTwo])
         
         // Update Rolled Amount on UI
-        diceTotalLabelView.text = "You rolled a \(rollSum)"
+
         //print(rollSum)
     }
     
