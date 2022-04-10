@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     enum Operation {
         case addition
+        case multiplication
+        case subtraction
         case none
     }
     
@@ -40,6 +42,12 @@ class ViewController: UIViewController {
         case "+":
             entries.append(Operation.addition)
             operation = Operation.addition
+        case "-":
+            entries.append(Operation.subtraction)
+            operation = Operation.subtraction
+        case "×":
+            entries.append(Operation.multiplication)
+            operation = Operation.multiplication
         default:
             print("ERROR: Incorrect Key Press")
         }
@@ -61,9 +69,20 @@ class ViewController: UIViewController {
             let num2: Int = Int(entries[2] as! String) ?? 0
             result = num1 + num2
             resultLabel.text = "\(result)"
+        
             
         case .none:
             print("ERROR: No operation selected.")
+        case .multiplication:
+            let num1: Int = Int(entries[0] as! String) ?? 0
+            let num2: Int = Int(entries[2] as! String) ?? 0
+            result = num1 * num2
+            resultLabel.text = "\(result)"
+        case .subtraction:
+            let num1: Int = Int(entries[0] as! String) ?? 0
+            let num2: Int = Int(entries[2] as! String) ?? 0
+            result = num1 - num2
+            resultLabel.text = "\(result)"
         }
     }
     
