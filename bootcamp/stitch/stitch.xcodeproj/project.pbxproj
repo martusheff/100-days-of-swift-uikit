@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF9A9C5E2802C3AD0018CAC5 /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = DF9A9C5D2802C3AD0018CAC5 /* crunch.wav */; };
 		DFB25B8927FF601D003ED100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25B8827FF601D003ED100 /* AppDelegate.swift */; };
 		DFB25B8B27FF601D003ED100 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25B8A27FF601D003ED100 /* SceneDelegate.swift */; };
 		DFB25B8D27FF601D003ED100 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB25B8C27FF601D003ED100 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF9A9C5D2802C3AD0018CAC5 /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
 		DFB25B8527FF601D003ED100 /* stitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB25B8827FF601D003ED100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB25B8A27FF601D003ED100 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF9A9C5C2802C3AD0018CAC5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DF9A9C5D2802C3AD0018CAC5 /* crunch.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		DFB25B7C27FF601D003ED100 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 				DFB25B9127FF601F003ED100 /* Assets.xcassets */,
 				DFB25B9327FF601F003ED100 /* LaunchScreen.storyboard */,
 				DFB25B9627FF601F003ED100 /* Info.plist */,
+				DF9A9C5C2802C3AD0018CAC5 /* Sounds */,
 			);
 			path = stitch;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB25B9527FF601F003ED100 /* LaunchScreen.storyboard in Resources */,
+				DF9A9C5E2802C3AD0018CAC5 /* crunch.wav in Resources */,
 				DFB25B9227FF601F003ED100 /* Assets.xcassets in Resources */,
 				DFB25B9027FF601D003ED100 /* Main.storyboard in Resources */,
 			);

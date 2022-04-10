@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var cookieImageView: UIImageView!
     @IBOutlet weak var secretBunnyImageView: UIImageView!
     @IBOutlet weak var secretMessageLabel: UILabel!
+    
+    var audioPlayer = AVAudioPlayer()
+    
     
     var bites = 1
     var secret = "xoxooxooo"
@@ -24,11 +28,22 @@ class ViewController: UIViewController {
     
 
     @IBAction func biteButtonTapped(_ sender: UIButton) {
+        guard let sound = Bundle.main.url(forResource: "crunch", withExtension: "wav") else {
+            print("ERROR: Unable to locate sound.")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound)
+            audioPlayer.play()
+        } catch {
+            print("ERROR: Unable to play bite sound.")
+        }
         let cookieToDisplay = bites + 1 > 3 ? 1 : bites + 1
         bites = cookieToDisplay
         cookieImageView.image = UIImage(named: "cookie\(cookieToDisplay)")
         sequence = ""
         secretUnlocked()
+        
         
         
     }
