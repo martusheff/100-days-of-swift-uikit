@@ -12,15 +12,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
-    var result = 1
+    var result = 0.0
+    var num1 = 0.0
+    var num2 = 0.0
     var entry: String = ""
-    var entries: [Any] = []
+    var entries: [String] = []
     var operation = Operation.none
     
     enum Operation {
         case addition
         case multiplication
         case subtraction
+        case division
         case none
     }
     
@@ -30,7 +33,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func numKeyPressed(_ sender: UIButton) {
-        entry += "\(sender.tag)"
+        if sender.currentTitle == "." {
+            entry += sender.currentTitle ?? ""
+        } else {
+            entry += "\(sender.tag)"
+        }
         resultLabel.text = entry
     }
     
@@ -40,17 +47,17 @@ class ViewController: UIViewController {
         entry = ""
         switch sender.currentTitle {
         case "+":
-            entries.append(Operation.addition)
             operation = Operation.addition
         case "-":
-            entries.append(Operation.subtraction)
             operation = Operation.subtraction
         case "×":
-            entries.append(Operation.multiplication)
             operation = Operation.multiplication
+        case "÷":
+            operation = Operation.division
         default:
             print("ERROR: Incorrect Key Press")
         }
+        
     }
     
     @IBAction func clearKeyPressed(_ sender: UIButton) {
@@ -62,28 +69,40 @@ class ViewController: UIViewController {
     
     @IBAction func equalKeyPressed(_ sender: UIButton) {
         entries.append(entry)
+        guard entries.count == 2 else { return }
         entry = ""
+        setEntries()
+        
         switch operation {
         case .addition:
-            let num1: Int = Int(entries[0] as! String) ?? 0
-            let num2: Int = Int(entries[2] as! String) ?? 0
             result = num1 + num2
-            resultLabel.text = "\(result)"
-        
-            
+        case .multiplication:
+            result = num1 * num2
+        case .subtraction:
+            result = num1 - num2
+        case .division:
+            result = num1 / num2
         case .none:
             print("ERROR: No operation selected.")
-        case .multiplication:
-            let num1: Int = Int(entries[0] as! String) ?? 0
-            let num2: Int = Int(entries[2] as! String) ?? 0
-            result = num1 * num2
-            resultLabel.text = "\(result)"
-        case .subtraction:
-            let num1: Int = Int(entries[0] as! String) ?? 0
-            let num2: Int = Int(entries[2] as! String) ?? 0
-            result = num1 - num2
-            resultLabel.text = "\(result)"
         }
+        resultLabel.text = "\(result)"
+        entries.removeAll()
+    }
+    
+    
+    
+    @IBAction func flipKeyTapped(_ sender: UIButton) {
+        guard !entry.isEmpty else { return }
+        if entry.first == "-" {
+            entry.removeFirst()
+        } else {
+            entry = "-" + entry
+        }
+        resultLabel.text = entry
+    }
+    func setEntries() {
+        num1 = Double(entries[0]) ?? 0.0
+        num2 = Double(entries[1]) ?? 0.0
     }
     
 }
