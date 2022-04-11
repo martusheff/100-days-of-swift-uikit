@@ -13,4 +13,5 @@ words = text.components(separatedBy: "\n")
 
 let count = words.count
 let random: String = words[Int.random(in: 0 ..< count)]
+
 print(random)
