@@ -337,6 +337,7 @@
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
+                                                    <action selector="returnPressed:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="NPl-pN-esY"/>
                                                     <action selector="returnPressed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="W7r-R2-OON"/>
                                                 </connections>
                                             </textField>

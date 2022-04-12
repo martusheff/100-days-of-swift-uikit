@@ -31,8 +31,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet var guessLabels: [UIStackView]!
-    
-    @IBOutlet weak var titleButton: UIButton!
+
     
     
     override func viewDidLoad() {
@@ -48,6 +47,7 @@ class ViewController: UIViewController {
     @IBAction func returnPressed(_ sender: UITextField) {
         self.view.endEditing(true)
     }
+    
     
     @IBAction func guessButtonTapped(_ sender: UIButton) {
         print(secretWord)
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func playGameButtonTapped(_ sender: UIButton) {
-        print("")
+        print("THIS")
         let randomWord = words[Int.random(in: 0..<words.count)]
         secretWord = randomWord
         resetGame()
