@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func guessButtonTapped(_ sender: UIButton) {
+        print(secretWord)
         guard guessTextField.text!.count == 5 else { return }
         guard secretWord != nil else { return }
         
@@ -49,9 +50,9 @@ class ViewController: UIViewController {
             label.text = guess[index]
             
             if guess[index] == target[index] {
-                label.backgroundColor = UIColor.green
+                label.backgroundColor = UIColor(red: 0.74, green: 0.89, blue: 0.65, alpha: 1.00)
             } else if target.contains(guess[index]) {
-                label.backgroundColor = UIColor.yellow
+                label.backgroundColor = UIColor(red: 1.00, green: 0.99, blue: 0.60, alpha: 1.00)
             }
             label.alpha = 1.0
         }
@@ -68,7 +69,7 @@ class ViewController: UIViewController {
             for (_, view) in stack.subviews.enumerated() {
                 var label = (view as? UILabel)!
                 label.text = "X"
-                label.backgroundColor = UIColor.lightGray
+                label.backgroundColor = UIColor(red: 0.76, green: 0.76, blue: 0.76, alpha: 1.00)
                 label.alpha = 0.25
             }
         }

@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,8 +24,8 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bordle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP6-t8-szu" userLabel="Title">
                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="82.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                                <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8t-Y6-IDP">
@@ -346,7 +345,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAz-dZ-ot8">
                                         <rect key="frame" x="0.0" y="685.33333333333337" width="375" height="82.666666666666629"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="GUESS">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
@@ -360,8 +359,12 @@
                                 <constraints>
                                     <constraint firstItem="Wlx-If-ifV" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="C4N-fV-t03"/>
                                     <constraint firstItem="YpZ-Qf-Qkl" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="CPa-6g-L4r"/>
+                                    <constraint firstItem="Wlx-If-ifV" firstAttribute="top" secondItem="G11-M4-HSH" secondAttribute="bottom" constant="3" id="In9-HZ-geF"/>
+                                    <constraint firstItem="G11-M4-HSH" firstAttribute="top" secondItem="w2s-SS-3b4" secondAttribute="bottom" constant="3" id="MvN-fD-JCD"/>
                                     <constraint firstItem="w2s-SS-3b4" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="PXK-Ye-RPh"/>
+                                    <constraint firstAttribute="trailing" secondItem="G11-M4-HSH" secondAttribute="trailing" id="T6J-c9-nZG"/>
                                     <constraint firstItem="bfJ-7y-HQx" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="USW-bc-vN9"/>
+                                    <constraint firstItem="G11-M4-HSH" firstAttribute="leading" secondItem="BQ6-fN-Feo" secondAttribute="leading" id="a7D-56-uEX"/>
                                     <constraint firstItem="jqw-bP-imu" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="e97-76-Ueq"/>
                                     <constraint firstItem="G11-M4-HSH" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="fR4-tB-6oZ"/>
                                     <constraint firstItem="dAz-dZ-ot8" firstAttribute="centerX" secondItem="BQ6-fN-Feo" secondAttribute="centerX" id="mST-Oe-JAE"/>
@@ -371,7 +374,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BQ6-fN-Feo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Uu-OB-2Pk"/>
                             <constraint firstAttribute="bottom" secondItem="BQ6-fN-Feo" secondAttribute="bottom" id="GzO-Qc-C85"/>
@@ -401,9 +404,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
