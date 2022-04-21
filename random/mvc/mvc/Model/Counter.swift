@@ -8,6 +8,7 @@
 import Foundation
 
 struct Counter {
+    
     var count = 0
     var rate = 1
     
